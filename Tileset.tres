@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=49 format=2]
+[gd_resource type="TileSet" load_steps=53 format=2]
 
 [ext_resource path="res://Assets/Serene_Village_revamped_v1.9/Serene_Village_32x32.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Water Waves.tres" type="Texture" id=2]
@@ -24,9 +24,6 @@ points = PoolVector2Array( 148.234, 93.9042, 12.6005, 93.9042, 12.6005, 0, 148.2
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 84.2687, 94.0447, 11.261, 94.0447, 11.261, 0.608154, 84.2687, 0.608154 )
 
-[sub_resource type="ConvexPolygonShape2D" id=46]
-points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
-
 [sub_resource type="ConvexPolygonShape2D" id=36]
 points = PoolVector2Array( 32, 32, 0.27478, 32, 0, 26.0803, 32, 26.0803 )
 
@@ -38,6 +35,9 @@ points = PoolVector2Array( 20.0952, 32, 11.7227, 32, 11.7227, 0.231384, 20.0952,
 
 [sub_resource type="ConvexPolygonShape2D" id=39]
 points = PoolVector2Array( 0, 23.7484, 31.4561, 23.2833, 31.1805, 26.316, 20.2498, 26.316, 20.2498, 31.8976, 11.8774, 31.665, 12.153, 26.0741, 0, 26.0741, 0, 24.6787 )
+
+[sub_resource type="ConvexPolygonShape2D" id=46]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 26.2199, 32, 0.0560455, 32, 0.0560455, 10.3059, 25.0571, 10.6935 )
@@ -83,6 +83,18 @@ points = PoolVector2Array( 28.1982, 32, 0, 32, 0, 0.112564, 28.1982, 0.112564 )
 
 [sub_resource type="ConvexPolygonShape2D" id=16]
 points = PoolVector2Array( 32, 32, 3.80963, 32, 3.80963, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=47]
+points = PoolVector2Array( 0, 0, 1.93423, 0, 1.93423, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=48]
+points = PoolVector2Array( 32, 32, 30.0143, 32, 30.0143, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=49]
+points = PoolVector2Array( 0, 0, 1.93423, 0, 1.93423, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=50]
+points = PoolVector2Array( 32, 32, 30.0143, 32, 30.0143, 0.0451202, 32, 0.0451202 )
 
 [sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 6.29559, 0, 32, 0, 32, 14.5284, 6.29559, 14.7609 )
@@ -1027,9 +1039,16 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 55/navigation_offset = Vector2( 0, 0 )
 55/shape_offset = Vector2( 0, 0 )
 55/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+55/shape = SubResource( 47 )
 55/shape_one_way = false
-55/shape_one_way_margin = 0.0
-55/shapes = [  ]
+55/shape_one_way_margin = 1.0
+55/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 47 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 55/z_index = 0
 56/name = "Serene_Village_32x32.png 56"
 56/texture = ExtResource( 1 )
@@ -1041,9 +1060,16 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 56/navigation_offset = Vector2( 0, 0 )
 56/shape_offset = Vector2( 0, 0 )
 56/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+56/shape = SubResource( 48 )
 56/shape_one_way = false
-56/shape_one_way_margin = 0.0
-56/shapes = [  ]
+56/shape_one_way_margin = 1.0
+56/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 48 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 56/z_index = 0
 57/name = "Serene_Village_32x32.png 57"
 57/texture = ExtResource( 1 )
@@ -1055,9 +1081,16 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 57/navigation_offset = Vector2( 0, 0 )
 57/shape_offset = Vector2( 0, 0 )
 57/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+57/shape = SubResource( 49 )
 57/shape_one_way = false
-57/shape_one_way_margin = 0.0
-57/shapes = [  ]
+57/shape_one_way_margin = 1.0
+57/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 49 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 57/z_index = 0
 58/name = "Serene_Village_32x32.png 58"
 58/texture = ExtResource( 1 )
@@ -1069,9 +1102,16 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 58/navigation_offset = Vector2( 0, 0 )
 58/shape_offset = Vector2( 0, 0 )
 58/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+58/shape = SubResource( 50 )
 58/shape_one_way = false
-58/shape_one_way_margin = 0.0
-58/shapes = [  ]
+58/shape_one_way_margin = 1.0
+58/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 50 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 58/z_index = 0
 59/name = "Serene_Village_32x32.png 59"
 59/texture = ExtResource( 1 )
@@ -2249,27 +2289,6 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 130/shape_one_way_margin = 0.0
 130/shapes = [  ]
 130/z_index = 0
-131/name = "Water Waves.tres 131"
-131/texture = ExtResource( 2 )
-131/tex_offset = Vector2( 0, 0 )
-131/modulate = Color( 1, 1, 1, 1 )
-131/region = Rect2( 0, 0, 32, 32 )
-131/tile_mode = 0
-131/occluder_offset = Vector2( 0, 0 )
-131/navigation_offset = Vector2( 0, 0 )
-131/shape_offset = Vector2( 0, 0 )
-131/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-131/shape = SubResource( 46 )
-131/shape_one_way = false
-131/shape_one_way_margin = 1.0
-131/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 46 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-131/z_index = 0
 132/name = "Serene_Village_32x32.png 132"
 132/texture = ExtResource( 1 )
 132/tex_offset = Vector2( 0, 0 )
@@ -2354,3 +2373,24 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 135/z_index = 0
+136/name = "Water Waves.tres 136"
+136/texture = ExtResource( 2 )
+136/tex_offset = Vector2( 0, 0 )
+136/modulate = Color( 1, 1, 1, 1 )
+136/region = Rect2( 0, 0, 32, 32 )
+136/tile_mode = 0
+136/occluder_offset = Vector2( 0, 0 )
+136/navigation_offset = Vector2( 0, 0 )
+136/shape_offset = Vector2( 0, 0 )
+136/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+136/shape = SubResource( 46 )
+136/shape_one_way = false
+136/shape_one_way_margin = 1.0
+136/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 46 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+136/z_index = 0
