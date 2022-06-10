@@ -11,7 +11,6 @@ func _ready():
 	rng.randomize()
 	correctButton = rng.randi_range(1,3)
 	wrongButtons.remove(correctButton)
-	wrongAnswers.shuffle()
 	for i in range(len(wrongButtons)-1):
 		get_node("Control/Button "+str(wrongButtons[i])+"/Antwoord "+str(wrongButtons[i])).text = wrongAnswers[i]
 	get_node("Control/Button "+str(correctButton)+"/Antwoord "+str(correctButton)).text = correctAnswer

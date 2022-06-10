@@ -150,6 +150,9 @@ rect_scale = Vector2( 0.2, 0.471179 )
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="Control/Confirm"]
 margin_right = 200.0

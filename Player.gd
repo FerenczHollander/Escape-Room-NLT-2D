@@ -26,11 +26,18 @@ func _ready():
 	if get_tree().current_scene.filename == "res://Beginning World.tscn":
 		currentInteractibleArea = "First_Spawn"
 		dialogueStart = 0
-		maxDialogue = 3
+		maxDialogue = 5
 		$UI/Dialogue.visible = true
 	if get_tree().current_scene.filename == "res://Overworld.tscn":
 		Globals.questionStep = 0
+		currentObjective += 1
 		global_position = Globals.lastPosition
+		if Globals.firstSpawn == false:
+			Globals.firstSpawn = true
+			currentInteractibleArea = "First_Spawn"
+			dialogueStart = 11
+			maxDialogue = 4
+			$UI/Dialogue.visible = true
 	pass # Replace with function body.
 
 
@@ -105,13 +112,16 @@ func _process(delta):
 		dialogueStep = 0
 	#Objective
 	if get_tree().current_scene.filename == "res://Overworld.tscn" or get_tree().current_scene.filename == "res://Beginning World.tscn":
-		currentObjective = int(Globals.questionsAnswered / 3)
 		if currentObjective < len(objectives):
 			objectivePosition = get_tree().get_root().get_node(objectives[currentObjective]).global_position
 			$"UI/Arrow Objective".rotation_degrees = rad2deg((objectivePosition-global_position).angle())+90
 
 #Dialogue
-var dialogue = ["Wat is deze plek?","Ik herinner mij niks meer, niet eens mijn naam!","Ik ga maar een rondkijken of ik wat interessants tegenkom.","Help! Een man is gevallen van de trap in zijn nieuwbouw huis!", "Maar hij eet kaas, dus het is ok!","De graslanden en grazers schreeuwen nog om jouw hulp!","HELP ZE!","Gefeliciteerd! Je kan eindelijk weg!","Het hele eiland is je dankbaar!"]
+var dialogue = ["Eindelijk ben ik bij opa's huis","Hij heeft mij verteld dat zijn encyclopedie hier ligt",
+"Maar hij heeft een terminale epilepsie,","Dus hij heeft hem per ongeluk in de haard gegooid","Kijken of ik wat kan terugvinden","Godverdedriedubbeltjes, de deur zit op slot",
+ "Ik zie wel dat als ik deze vragen beantwoord de deur opengaat","De graslanden en grazers schreeuwen nog om jouw hulp!","HELP ZE!","Gefeliciteerd! Je kan eindelijk weg!",
+"Het hele eiland is je dankbaar!", "Na het zoeken ben ik in de haard gevallen!","En ik ben nu ineens hier beland!",
+"Ik krijg een gevoel dat ik de natuur moet helpen","Aber jetzt muss ich pinkeln!"]
 #Change scenes
 func nextScene():
 	if get_tree().current_scene.filename == "res://Overworld.tscn":
@@ -124,7 +134,7 @@ func nextScene():
 #Areas
 func _on_FirstHouse_Door_body_entered(body):
 	currentInteractibleArea = "First House"
-	dialogueStart = 3
+	dialogueStart = 5
 	maxDialogue = 2
 	Globals.questionStart = 1
 	Globals.maxQuestions = 3
@@ -136,11 +146,11 @@ func _on_FirstHouse_Door_body_exited(body):
 func _on_Final_Border_body_entered(body):
 	currentInteractibleArea = "Final Border"
 	if Globals.maxQuestionsAnswered > Globals.questionsAnswered:
-		dialogueStart = 5
+		dialogueStart = 7
 		maxDialogue = 2
 		$UI/Dialogue.visible = true
 	if Globals.maxQuestionsAnswered == Globals.questionsAnswered:
-		dialogueStart = 7
+		dialogueStart = 9
 		maxDialogue = 2
 	pass # Replace with function body.
 
