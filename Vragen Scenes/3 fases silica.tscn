@@ -1,0 +1,291 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Timer.gd" type="Script" id=1]
+[ext_resource path="res://Vragen Scenes/Scripts/Open Vraag.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Answer_Button_Unpressed.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Vragen/Green Check.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Buttons/Answer_Button_Hover.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Buttons/Answer_Button_Pressed.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Vragen/Red Cross.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Vragen/Background.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Pixelated Font Normal.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://GlobalTimeLeft.gd" type="Script" id=11]
+[ext_resource path="res://Assets/Vragen/kwarts.jpg" type="Texture" id=12]
+[ext_resource path="res://Assets/Vragen/kiezelzuur.jpg" type="Texture" id=13]
+[ext_resource path="res://Assets/Vragen/silaan.jpg" type="Texture" id=14]
+[ext_resource path="res://Assets/Pixelated Font Large.tres" type="DynamicFont" id=15]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Correct"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 1e-05, 1e-05 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Incorrect"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 0.75, 0.75 ), Vector2( 0.75, 0.75 ), Vector2( 1e-05, 1e-05 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Time Left" type="Label" parent="CanvasLayer"]
+margin_right = 100.0
+margin_bottom = 20.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Time Left"]
+wait_time = 2700.0
+autostart = true
+script = ExtResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 10 )]
+visible = false
+position = Vector2( 512, 300 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 6.0
+margin_top = 150.0
+margin_right = 46.0
+margin_bottom = 184.0
+
+[node name="Gebruiker Antwoord" type="TextEdit" parent="Control"]
+margin_left = 44.0
+margin_top = -17.0
+margin_right = 506.0
+margin_bottom = 363.0
+custom_fonts/font = ExtResource( 9 )
+text = "Antwoord:
+1.
+2.
+3."
+wrap_enabled = true
+
+[node name="Vraag" type="Label" parent="Control"]
+margin_left = 6.0
+margin_top = -140.0
+margin_right = 1006.0
+margin_bottom = -15.0
+custom_fonts/font = ExtResource( 9 )
+text = " Geef de benaming en fase  van de verschillende silicas  bij bijbehorende plaatjes"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+
+[node name="Confirm" type="TextureButton" parent="Control"]
+margin_left = 811.0
+margin_top = 377.0
+margin_right = 1811.0
+margin_bottom = 517.0
+rect_scale = Vector2( 0.2, 0.471179 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Control/Confirm"]
+margin_right = 200.0
+margin_bottom = 46.0
+rect_scale = Vector2( 5, 3 )
+custom_fonts/font = ExtResource( 9 )
+text = "Confirm"
+align = 1
+valign = 1
+
+[node name="Juist" type="TextureButton" parent="Control"]
+visible = false
+margin_left = 305.0
+margin_top = 377.0
+margin_right = 1305.0
+margin_bottom = 517.0
+rect_scale = Vector2( 0.2, 0.471179 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Control/Juist"]
+margin_right = 200.0
+margin_bottom = 46.0
+rect_scale = Vector2( 5, 3 )
+custom_fonts/font = ExtResource( 9 )
+text = "Juist"
+align = 1
+valign = 1
+
+[node name="Onjuist" type="TextureButton" parent="Control"]
+visible = false
+margin_left = 509.0
+margin_top = 377.0
+margin_right = 1509.0
+margin_bottom = 517.0
+rect_scale = Vector2( 0.2, 0.471179 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Control/Onjuist"]
+margin_right = 200.0
+margin_bottom = 46.0
+rect_scale = Vector2( 5, 3 )
+custom_fonts/font = ExtResource( 9 )
+text = "Onjuist"
+align = 1
+valign = 1
+
+[node name="Correcte Antwoord" type="Label" parent="Control"]
+visible = false
+margin_left = 44.0
+margin_top = 187.0
+margin_right = 506.0
+margin_bottom = 360.0
+custom_fonts/font = ExtResource( 9 )
+text = "Juiste antwoord:
+1. Kiezelzuur - Vloeistof
+2. Silaan - Gas
+3. Kwarts/Kristallijn - Vast"
+autowrap = true
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+z_index = -1
+texture = ExtResource( 8 )
+
+[node name="Result" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+scale = Vector2( 1e-05, 1e-05 )
+z_index = 2
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Result"]
+anims/Correct = SubResource( 1 )
+anims/Incorrect = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+
+[node name="AudioPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Silaan" type="Sprite" parent="."]
+position = Vector2( 876, 214 )
+scale = Vector2( 0.727778, 0.727778 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Silaan"]
+margin_left = -26.1069
+margin_top = 114.046
+margin_right = 13.8931
+margin_bottom = 150.046
+rect_scale = Vector2( 1.374, 1.374 )
+custom_fonts/font = ExtResource( 15 )
+text = "2"
+align = 1
+valign = 1
+
+[node name="Kiezelzuur" type="Sprite" parent="."]
+position = Vector2( 621, 215 )
+texture = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="Kiezelzuur"]
+margin_left = -20.0
+margin_top = 85.0
+margin_right = 20.0
+margin_bottom = 121.0
+custom_fonts/font = ExtResource( 15 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Kwarts" type="Sprite" parent="."]
+position = Vector2( 749, 392 )
+scale = Vector2( 0.814433, 0.814433 )
+texture = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="Kwarts"]
+margin_left = -26.1069
+margin_top = 114.046
+margin_right = 13.8931
+margin_bottom = 150.046
+rect_scale = Vector2( 1.374, 1.374 )
+custom_fonts/font = ExtResource( 15 )
+text = "3"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="Control/Confirm" to="." method="_on_Confirm_pressed"]
+[connection signal="pressed" from="Control/Juist" to="." method="_on_Juist_pressed"]
+[connection signal="pressed" from="Control/Onjuist" to="." method="_on_Onjuist_pressed"]
+[connection signal="animation_finished" from="Result/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

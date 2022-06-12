@@ -1,19 +1,22 @@
 extends Node2D
-var rng = RandomNumberGenerator.new()
 
-onready var correctAnswer = $"Control/Button 1/Antwoord 1".text
-onready var wrongAnswers = [$"Control/Button 2/Antwoord 2".text,$"Control/Button 3/Antwoord 3".text]
-var wrongButtons = [1,2,3]
+onready var answers =  [$"Control/Button 1/Antwoord".text,$"Control/Button 2/Antwoord".text,$"Control/Button 3/Antwoord".text]
+var buttons = [1,2,3]
 var onCooldown = false
 var correctButton
+var correctAnswer
 
 func _ready():
-	rng.randomize()
-	correctButton = rng.randi_range(1,3)
-	wrongButtons.remove(correctButton)
-	for i in range(len(wrongButtons)-1):
-		get_node("Control/Button "+str(wrongButtons[i])+"/Antwoord "+str(wrongButtons[i])).text = wrongAnswers[i]
-	get_node("Control/Button "+str(correctButton)+"/Antwoord "+str(correctButton)).text = correctAnswer
+	correctAnswer = answers[0]
+	randomize()
+	answers.shuffle()
+	for i in range(1,(buttons.size()+1)):
+		get_node("Control/Button "+str(i)+"/Antwoord").text = answers[i-1]
+	for i in range(1,(buttons.size())+1):
+		if get_node("Control/Button "+str(i)+"/Antwoord").text == correctAnswer:
+			correctButton = buttons[i-1]
+	print(correctButton)
+	
 
 func correct():
 	get_node("Result/AnimationPlayer").play("Correct")

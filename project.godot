@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Escape Room NLT 2D"
-run/main_scene="res://Overworld.tscn"
+run/main_scene="res://Beginning World.tscn"
 config/icon="res://icon.png"
 
 [autoload]

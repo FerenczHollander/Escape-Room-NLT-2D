@@ -8,6 +8,8 @@ var maxQuestions
 var questionStep = -1
 var timeOffWrongAnswer = 30.00
 var firstSpawn = false
+var currentInteractibleArea = null
+var currentObjective = 0
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

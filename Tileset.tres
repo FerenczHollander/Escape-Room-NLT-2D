@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=53 format=2]
+[gd_resource type="TileSet" load_steps=71 format=2]
 
 [ext_resource path="res://Assets/Serene_Village_revamped_v1.9/Serene_Village_32x32.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Water Waves.tres" type="Texture" id=2]
@@ -24,6 +24,21 @@ points = PoolVector2Array( 148.234, 93.9042, 12.6005, 93.9042, 12.6005, 0, 148.2
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 84.2687, 94.0447, 11.261, 94.0447, 11.261, 0.608154, 84.2687, 0.608154 )
 
+[sub_resource type="ConvexPolygonShape2D" id=51]
+points = PoolVector2Array( 64, 96, 0, 96, 0.219513, 19.8837, 64, 19.8837 )
+
+[sub_resource type="ConvexPolygonShape2D" id=52]
+points = PoolVector2Array( 64, 96, 0, 96, 0.17572, 19.8837, 64, 19.8837 )
+
+[sub_resource type="ConvexPolygonShape2D" id=53]
+points = PoolVector2Array( 64, 96, 0, 96, 0.364471, 19.8837, 64, 19.8837 )
+
+[sub_resource type="ConvexPolygonShape2D" id=54]
+points = PoolVector2Array( 64, 96, 0, 96, 0.0880737, 20.1163, 64, 20.1163 )
+
+[sub_resource type="ConvexPolygonShape2D" id=55]
+points = PoolVector2Array( 64, 64, 0, 64, 0.188965, 7.77643, 64, 7.77643 )
+
 [sub_resource type="ConvexPolygonShape2D" id=36]
 points = PoolVector2Array( 32, 32, 0.27478, 32, 0, 26.0803, 32, 26.0803 )
 
@@ -38,6 +53,36 @@ points = PoolVector2Array( 0, 23.7484, 31.4561, 23.2833, 31.1805, 26.316, 20.249
 
 [sub_resource type="ConvexPolygonShape2D" id=46]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=56]
+points = PoolVector2Array( 1.80798, 31.9466, 1.92014, 31.9466, 2.03229, 14.0015, 7.97659, 6.03839, 18.0083, 2.07241, 32, 2.07241, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=57]
+points = PoolVector2Array( 0, 2.04024, 32, 2.00426, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=58]
+points = PoolVector2Array( 0, 6.59956, 0, 2.08215, 14.0855, 1.99452, 23.9771, 5.96674, 30.0523, 13.9891, 29.9744, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=59]
+points = PoolVector2Array( 28.0272, 32, 0, 32, 0, 0, 28.0272, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=60]
+points = PoolVector2Array( 0.00100708, 0.00572205, 29.9657, 0, 30.0198, 17.9223, 24.016, 26.0085, 10.0073, 32, 0, 31.9581 )
+
+[sub_resource type="ConvexPolygonShape2D" id=61]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=62]
+points = PoolVector2Array( 2.00281, 0, 32, 0, 32, 32, 32, 32, 22.0153, 31.9649, 6.00531, 23.9058, 2.00281, 17.8818 )
+
+[sub_resource type="ConvexPolygonShape2D" id=63]
+points = PoolVector2Array( 32, 32, 1.85947, 32, 1.85947, 0.0489845, 32, 0.0489845 )
+
+[sub_resource type="ConvexPolygonShape2D" id=64]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=65]
+points = PoolVector2Array( 12.5591, 33.7577, 16.5127, 27.9435, 36.9787, 28.1761, 42.0952, 31.8972, 41.8626, 37.9439, 49.5374, 37.9439, 53.9562, 41.8976, 53.7236, 58.1773, 45.8163, 61.8984, 34.1879, 61.8984, 12.0939, 49.8049 )
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 26.2199, 32, 0.0560455, 32, 0.0560455, 10.3059, 25.0571, 10.6935 )
@@ -96,6 +141,9 @@ points = PoolVector2Array( 0, 0, 1.93423, 0, 1.93423, 32, 0, 32 )
 [sub_resource type="ConvexPolygonShape2D" id=50]
 points = PoolVector2Array( 32, 32, 30.0143, 32, 30.0143, 0.0451202, 32, 0.0451202 )
 
+[sub_resource type="ConvexPolygonShape2D" id=66]
+points = PoolVector2Array( 32, 32, 30.0697, 32, 30.0697, 0.0872192, 32, 0.0872192 )
+
 [sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 6.29559, 0, 32, 0, 32, 14.5284, 6.29559, 14.7609 )
 
@@ -105,6 +153,9 @@ points = PoolVector2Array( 32, 13.8307, 0.110626, 13.8307, 0.110626, 0, 32, 0 )
 [sub_resource type="ConvexPolygonShape2D" id=19]
 points = PoolVector2Array( 32, 13.7725, 0.205017, 13.7725, 0.205017, 0.0509949, 32, 0.0509949 )
 
+[sub_resource type="ConvexPolygonShape2D" id=67]
+points = PoolVector2Array( 32, 32, 30.1362, 32, 30.1362, 13.8371, 32, 13.8371 )
+
 [sub_resource type="ConvexPolygonShape2D" id=20]
 points = PoolVector2Array( 5.5979, 17.8568, 32, 17.8568, 32, 32, 5.5979, 32 )
 
@@ -113,6 +164,9 @@ points = PoolVector2Array( 0, 17.6242, 31.7399, 17.6242, 31.7399, 31.8109, 0, 31
 
 [sub_resource type="ConvexPolygonShape2D" id=22]
 points = PoolVector2Array( 32, 32, 0.205017, 32, 0.205017, 17.6242, 32, 17.6242 )
+
+[sub_resource type="ConvexPolygonShape2D" id=68]
+points = PoolVector2Array( 32, 17.5079, 29.9082, 17.5079, 29.9082, 0.226822, 32, 0.226822 )
 
 [sub_resource type="ConvexPolygonShape2D" id=23]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -1207,9 +1261,16 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 65/navigation_offset = Vector2( 0, 0 )
 65/shape_offset = Vector2( 0, 0 )
 65/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+65/shape = SubResource( 66 )
 65/shape_one_way = false
-65/shape_one_way_margin = 0.0
-65/shapes = [  ]
+65/shape_one_way_margin = 1.0
+65/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 66 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 65/z_index = 0
 66/name = "Serene_Village_32x32.png 66"
 66/texture = ExtResource( 1 )
@@ -1271,6 +1332,12 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 19 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 67 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 68/z_index = 0
@@ -1334,6 +1401,12 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 22 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 68 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 71/z_index = 0
@@ -1623,7 +1696,7 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 85/shape_one_way = false
 85/shape_one_way_margin = 0.0
 85/shapes = [  ]
-85/z_index = 0
+85/z_index = -1
 86/name = "Serene_Village_32x32.png 86"
 86/texture = ExtResource( 1 )
 86/tex_offset = Vector2( 0, 0 )
@@ -1637,7 +1710,7 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 86/shape_one_way = false
 86/shape_one_way_margin = 0.0
 86/shapes = [  ]
-86/z_index = 0
+86/z_index = -1
 87/name = "Serene_Village_32x32.png 87"
 87/texture = ExtResource( 1 )
 87/tex_offset = Vector2( 0, 0 )
@@ -1651,7 +1724,7 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 87/shape_one_way = false
 87/shape_one_way_margin = 0.0
 87/shapes = [  ]
-87/z_index = 0
+87/z_index = -1
 88/name = "Serene_Village_32x32.png 88"
 88/texture = ExtResource( 1 )
 88/tex_offset = Vector2( 0, 0 )
@@ -1665,7 +1738,7 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 88/shape_one_way = false
 88/shape_one_way_margin = 0.0
 88/shapes = [  ]
-88/z_index = 0
+88/z_index = -1
 89/name = "Serene_Village_32x32.png 89"
 89/texture = ExtResource( 1 )
 89/tex_offset = Vector2( 0, 0 )
@@ -1679,7 +1752,7 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 89/shape_one_way = false
 89/shape_one_way_margin = 0.0
 89/shapes = [  ]
-89/z_index = 0
+89/z_index = -1
 90/name = "Serene_Village_32x32.png 90"
 90/texture = ExtResource( 1 )
 90/tex_offset = Vector2( 0, 0 )
@@ -1693,7 +1766,7 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 90/shape_one_way = false
 90/shape_one_way_margin = 0.0
 90/shapes = [  ]
-90/z_index = 0
+90/z_index = -1
 91/name = "Serene_Village_32x32.png 91"
 91/texture = ExtResource( 1 )
 91/tex_offset = Vector2( 0, 0 )
@@ -1777,7 +1850,7 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 96/shape_one_way = false
 96/shape_one_way_margin = 0.0
 96/shapes = [  ]
-96/z_index = 0
+96/z_index = -1
 97/name = "Serene_Village_32x32.png 97"
 97/texture = ExtResource( 1 )
 97/tex_offset = Vector2( 0, 0 )
@@ -2060,14 +2133,14 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 114/z_index = 0
 115/name = "Serene_Village_32x32.png 115"
 115/texture = ExtResource( 1 )
-115/tex_offset = Vector2( 0, 0 )
+115/tex_offset = Vector2( -32, -96 )
 115/modulate = Color( 1, 1, 1, 1 )
 115/region = Rect2( 320, 1312, 96, 128 )
 115/tile_mode = 0
 115/occluder_offset = Vector2( 0, 0 )
 115/navigation_offset = Vector2( 0, 0 )
-115/shape_offset = Vector2( 0, 0 )
-115/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+115/shape_offset = Vector2( -32, -96 )
+115/shape_transform = Transform2D( 1, 0, 0, 1, -32, -96 )
 115/shape = SubResource( 7 )
 115/shape_one_way = false
 115/shape_one_way_margin = 1.0
@@ -2076,9 +2149,9 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 7 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+"shape_transform": Transform2D( 1, 0, 0, 1, -32, -96 )
 } ]
-115/z_index = 0
+115/z_index = -1
 116/name = "Serene_Village_32x32.png 116"
 116/texture = ExtResource( 1 )
 116/tex_offset = Vector2( 0, 0 )
@@ -2227,67 +2300,102 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 126/tile_mode = 0
 126/occluder_offset = Vector2( 0, 0 )
 126/navigation_offset = Vector2( 0, 0 )
-126/shape_offset = Vector2( 0, 0 )
-126/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+126/shape_offset = Vector2( -16, -64 )
+126/shape_transform = Transform2D( 1, 0, 0, 1, -16, -64 )
+126/shape = SubResource( 51 )
 126/shape_one_way = false
-126/shape_one_way_margin = 0.0
-126/shapes = [  ]
+126/shape_one_way_margin = 1.0
+126/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 51 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, -16, -64 )
+} ]
 126/z_index = -1
 127/name = "Serene_Village_32x32.png 127"
 127/texture = ExtResource( 1 )
-127/tex_offset = Vector2( 0, -64 )
+127/tex_offset = Vector2( -16, -64 )
 127/modulate = Color( 1, 1, 1, 1 )
 127/region = Rect2( 352, 384, 64, 96 )
 127/tile_mode = 0
 127/occluder_offset = Vector2( 0, 0 )
 127/navigation_offset = Vector2( 0, 0 )
-127/shape_offset = Vector2( 0, 0 )
-127/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+127/shape_offset = Vector2( -16, -64 )
+127/shape_transform = Transform2D( 1, 0, 0, 1, -16, -64 )
+127/shape = SubResource( 52 )
 127/shape_one_way = false
-127/shape_one_way_margin = 0.0
-127/shapes = [  ]
+127/shape_one_way_margin = 1.0
+127/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 52 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, -16, -64 )
+} ]
 127/z_index = -1
 128/name = "Serene_Village_32x32.png 128"
 128/texture = ExtResource( 1 )
-128/tex_offset = Vector2( 0, -64 )
+128/tex_offset = Vector2( -16, -64 )
 128/modulate = Color( 1, 1, 1, 1 )
 128/region = Rect2( 416, 384, 64, 96 )
 128/tile_mode = 0
 128/occluder_offset = Vector2( 0, 0 )
 128/navigation_offset = Vector2( 0, 0 )
-128/shape_offset = Vector2( 0, 0 )
-128/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+128/shape_offset = Vector2( -16, -64 )
+128/shape_transform = Transform2D( 1, 0, 0, 1, -16, -64 )
+128/shape = SubResource( 53 )
 128/shape_one_way = false
-128/shape_one_way_margin = 0.0
-128/shapes = [  ]
+128/shape_one_way_margin = 1.0
+128/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 53 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, -16, -64 )
+} ]
 128/z_index = -1
 129/name = "Serene_Village_32x32.png 129"
 129/texture = ExtResource( 1 )
-129/tex_offset = Vector2( 0, -64 )
+129/tex_offset = Vector2( -16, -64 )
 129/modulate = Color( 1, 1, 1, 1 )
 129/region = Rect2( 480, 384, 64, 96 )
 129/tile_mode = 0
 129/occluder_offset = Vector2( 0, 0 )
 129/navigation_offset = Vector2( 0, 0 )
-129/shape_offset = Vector2( 0, 0 )
-129/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+129/shape_offset = Vector2( -16, -64 )
+129/shape_transform = Transform2D( 1, 0, 0, 1, -16, -64 )
+129/shape = SubResource( 54 )
 129/shape_one_way = false
-129/shape_one_way_margin = 0.0
-129/shapes = [  ]
+129/shape_one_way_margin = 1.0
+129/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 54 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, -16, -64 )
+} ]
 129/z_index = -1
 130/name = "Serene_Village_32x32.png 130"
 130/texture = ExtResource( 1 )
-130/tex_offset = Vector2( 0, 0 )
+130/tex_offset = Vector2( -16, -32 )
 130/modulate = Color( 1, 1, 1, 1 )
 130/region = Rect2( 544, 416, 64, 64 )
 130/tile_mode = 0
 130/occluder_offset = Vector2( 0, 0 )
 130/navigation_offset = Vector2( 0, 0 )
-130/shape_offset = Vector2( 0, 0 )
-130/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+130/shape_offset = Vector2( -16, -32 )
+130/shape_transform = Transform2D( 1, 0, 0, 1, -16, -32 )
+130/shape = SubResource( 55 )
 130/shape_one_way = false
-130/shape_one_way_margin = 0.0
-130/shapes = [  ]
+130/shape_one_way_margin = 1.0
+130/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 55 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, -16, -32 )
+} ]
 130/z_index = 0
 132/name = "Serene_Village_32x32.png 132"
 132/texture = ExtResource( 1 )
@@ -2394,3 +2502,353 @@ points = PoolVector2Array( 32, 32, 6.47356, 32, 6.47356, 0.0180664, 32, 0.179565
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 136/z_index = 0
+137/name = "Serene_Village_32x32.png 137"
+137/texture = ExtResource( 1 )
+137/tex_offset = Vector2( 0, 0 )
+137/modulate = Color( 1, 1, 1, 1 )
+137/region = Rect2( 0, 96, 32, 32 )
+137/tile_mode = 0
+137/occluder_offset = Vector2( 0, 0 )
+137/navigation_offset = Vector2( 0, 0 )
+137/shape_offset = Vector2( 0, 0 )
+137/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+137/shape_one_way = false
+137/shape_one_way_margin = 0.0
+137/shapes = [  ]
+137/z_index = -1
+138/name = "Serene_Village_32x32.png 138"
+138/texture = ExtResource( 1 )
+138/tex_offset = Vector2( 0, 0 )
+138/modulate = Color( 1, 1, 1, 1 )
+138/region = Rect2( 32, 96, 32, 32 )
+138/tile_mode = 0
+138/occluder_offset = Vector2( 0, 0 )
+138/navigation_offset = Vector2( 0, 0 )
+138/shape_offset = Vector2( 0, 0 )
+138/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+138/shape_one_way = false
+138/shape_one_way_margin = 0.0
+138/shapes = [  ]
+138/z_index = -1
+139/name = "Serene_Village_32x32.png 139"
+139/texture = ExtResource( 1 )
+139/tex_offset = Vector2( 0, 0 )
+139/modulate = Color( 1, 1, 1, 1 )
+139/region = Rect2( 64, 96, 32, 32 )
+139/tile_mode = 0
+139/occluder_offset = Vector2( 0, 0 )
+139/navigation_offset = Vector2( 0, 0 )
+139/shape_offset = Vector2( 0, 0 )
+139/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+139/shape_one_way = false
+139/shape_one_way_margin = 0.0
+139/shapes = [  ]
+139/z_index = -1
+141/name = "Serene_Village_32x32.png 141"
+141/texture = ExtResource( 1 )
+141/tex_offset = Vector2( 0, 0 )
+141/modulate = Color( 1, 1, 1, 1 )
+141/region = Rect2( 64, 128, 32, 32 )
+141/tile_mode = 0
+141/occluder_offset = Vector2( 0, 0 )
+141/navigation_offset = Vector2( 0, 0 )
+141/shape_offset = Vector2( 0, 0 )
+141/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+141/shape_one_way = false
+141/shape_one_way_margin = 0.0
+141/shapes = [  ]
+141/z_index = -1
+142/name = "Serene_Village_32x32.png 142"
+142/texture = ExtResource( 1 )
+142/tex_offset = Vector2( 0, 0 )
+142/modulate = Color( 1, 1, 1, 1 )
+142/region = Rect2( 0, 160, 32, 32 )
+142/tile_mode = 0
+142/occluder_offset = Vector2( 0, 0 )
+142/navigation_offset = Vector2( 0, 0 )
+142/shape_offset = Vector2( 0, 0 )
+142/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+142/shape_one_way = false
+142/shape_one_way_margin = 0.0
+142/shapes = [  ]
+142/z_index = -1
+143/name = "Serene_Village_32x32.png 143"
+143/texture = ExtResource( 1 )
+143/tex_offset = Vector2( 0, 0 )
+143/modulate = Color( 1, 1, 1, 1 )
+143/region = Rect2( 32, 160, 32, 32 )
+143/tile_mode = 0
+143/occluder_offset = Vector2( 0, 0 )
+143/navigation_offset = Vector2( 0, 0 )
+143/shape_offset = Vector2( 0, 0 )
+143/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+143/shape_one_way = false
+143/shape_one_way_margin = 0.0
+143/shapes = [  ]
+143/z_index = -1
+144/name = "Serene_Village_32x32.png 144"
+144/texture = ExtResource( 1 )
+144/tex_offset = Vector2( 0, 0 )
+144/modulate = Color( 1, 1, 1, 1 )
+144/region = Rect2( 64, 160, 32, 32 )
+144/tile_mode = 0
+144/occluder_offset = Vector2( 0, 0 )
+144/navigation_offset = Vector2( 0, 0 )
+144/shape_offset = Vector2( 0, 0 )
+144/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+144/shape_one_way = false
+144/shape_one_way_margin = 0.0
+144/shapes = [  ]
+144/z_index = -1
+145/name = "Serene_Village_32x32.png 145"
+145/texture = ExtResource( 1 )
+145/tex_offset = Vector2( 0, 0 )
+145/modulate = Color( 1, 1, 1, 1 )
+145/region = Rect2( 0, 192, 32, 32 )
+145/tile_mode = 0
+145/occluder_offset = Vector2( 0, 0 )
+145/navigation_offset = Vector2( 0, 0 )
+145/shape_offset = Vector2( 0, 0 )
+145/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+145/shape_one_way = false
+145/shape_one_way_margin = 0.0
+145/shapes = [  ]
+145/z_index = -1
+146/name = "Serene_Village_32x32.png 146"
+146/texture = ExtResource( 1 )
+146/tex_offset = Vector2( 0, 0 )
+146/modulate = Color( 1, 1, 1, 1 )
+146/region = Rect2( 64, 192, 32, 32 )
+146/tile_mode = 0
+146/occluder_offset = Vector2( 0, 0 )
+146/navigation_offset = Vector2( 0, 0 )
+146/shape_offset = Vector2( 0, 0 )
+146/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+146/shape_one_way = false
+146/shape_one_way_margin = 0.0
+146/shapes = [  ]
+146/z_index = -1
+147/name = "Serene_Village_32x32.png 147"
+147/texture = ExtResource( 1 )
+147/tex_offset = Vector2( 0, 0 )
+147/modulate = Color( 1, 1, 1, 1 )
+147/region = Rect2( 0, 128, 32, 32 )
+147/tile_mode = 0
+147/occluder_offset = Vector2( 0, 0 )
+147/navigation_offset = Vector2( 0, 0 )
+147/shape_offset = Vector2( 0, 0 )
+147/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+147/shape_one_way = false
+147/shape_one_way_margin = 0.0
+147/shapes = [  ]
+147/z_index = -1
+148/name = "Serene_Village_32x32.png 148"
+148/texture = ExtResource( 1 )
+148/tex_offset = Vector2( 0, 0 )
+148/modulate = Color( 1, 1, 1, 1 )
+148/region = Rect2( 352, 0, 32, 32 )
+148/tile_mode = 0
+148/occluder_offset = Vector2( 0, 0 )
+148/navigation_offset = Vector2( 0, 0 )
+148/shape_offset = Vector2( 0, 0 )
+148/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+148/shape = SubResource( 56 )
+148/shape_one_way = false
+148/shape_one_way_margin = 1.0
+148/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 56 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+148/z_index = 0
+149/name = "Serene_Village_32x32.png 149"
+149/texture = ExtResource( 1 )
+149/tex_offset = Vector2( 0, 0 )
+149/modulate = Color( 1, 1, 1, 1 )
+149/region = Rect2( 384, 0, 32, 32 )
+149/tile_mode = 0
+149/occluder_offset = Vector2( 0, 0 )
+149/navigation_offset = Vector2( 0, 0 )
+149/shape_offset = Vector2( 0, 0 )
+149/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+149/shape = SubResource( 57 )
+149/shape_one_way = false
+149/shape_one_way_margin = 1.0
+149/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 57 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+149/z_index = 0
+150/name = "Serene_Village_32x32.png 150"
+150/texture = ExtResource( 1 )
+150/tex_offset = Vector2( 0, 0 )
+150/modulate = Color( 1, 1, 1, 1 )
+150/region = Rect2( 416, 0, 32, 32 )
+150/tile_mode = 0
+150/occluder_offset = Vector2( 0, 0 )
+150/navigation_offset = Vector2( 0, 0 )
+150/shape_offset = Vector2( 0, 0 )
+150/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+150/shape = SubResource( 58 )
+150/shape_one_way = false
+150/shape_one_way_margin = 1.0
+150/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 58 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+150/z_index = 0
+151/name = "Serene_Village_32x32.png 151"
+151/texture = ExtResource( 1 )
+151/tex_offset = Vector2( 0, 0 )
+151/modulate = Color( 1, 1, 1, 1 )
+151/region = Rect2( 416, 32, 32, 32 )
+151/tile_mode = 0
+151/occluder_offset = Vector2( 0, 0 )
+151/navigation_offset = Vector2( 0, 0 )
+151/shape_offset = Vector2( 0, 0 )
+151/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+151/shape = SubResource( 59 )
+151/shape_one_way = false
+151/shape_one_way_margin = 1.0
+151/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 59 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+151/z_index = 0
+152/name = "Serene_Village_32x32.png 152"
+152/texture = ExtResource( 1 )
+152/tex_offset = Vector2( 0, 0 )
+152/modulate = Color( 1, 1, 1, 1 )
+152/region = Rect2( 416, 64, 32, 32 )
+152/tile_mode = 0
+152/occluder_offset = Vector2( 0, 0 )
+152/navigation_offset = Vector2( 0, 0 )
+152/shape_offset = Vector2( 0, 0 )
+152/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+152/shape = SubResource( 60 )
+152/shape_one_way = false
+152/shape_one_way_margin = 1.0
+152/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 60 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+152/z_index = 0
+153/name = "Serene_Village_32x32.png 153"
+153/texture = ExtResource( 1 )
+153/tex_offset = Vector2( 0, 0 )
+153/modulate = Color( 1, 1, 1, 1 )
+153/region = Rect2( 384, 64, 32, 32 )
+153/tile_mode = 0
+153/occluder_offset = Vector2( 0, 0 )
+153/navigation_offset = Vector2( 0, 0 )
+153/shape_offset = Vector2( 0, 0 )
+153/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+153/shape = SubResource( 61 )
+153/shape_one_way = false
+153/shape_one_way_margin = 1.0
+153/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 61 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+153/z_index = 0
+154/name = "Serene_Village_32x32.png 154"
+154/texture = ExtResource( 1 )
+154/tex_offset = Vector2( 0, 0 )
+154/modulate = Color( 1, 1, 1, 1 )
+154/region = Rect2( 352, 64, 32, 32 )
+154/tile_mode = 0
+154/occluder_offset = Vector2( 0, 0 )
+154/navigation_offset = Vector2( 0, 0 )
+154/shape_offset = Vector2( 0, 0 )
+154/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+154/shape = SubResource( 62 )
+154/shape_one_way = false
+154/shape_one_way_margin = 1.0
+154/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 62 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+154/z_index = 0
+155/name = "Serene_Village_32x32.png 155"
+155/texture = ExtResource( 1 )
+155/tex_offset = Vector2( 0, 0 )
+155/modulate = Color( 1, 1, 1, 1 )
+155/region = Rect2( 352, 32, 32, 32 )
+155/tile_mode = 0
+155/occluder_offset = Vector2( 0, 0 )
+155/navigation_offset = Vector2( 0, 0 )
+155/shape_offset = Vector2( 0, 0 )
+155/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+155/shape = SubResource( 63 )
+155/shape_one_way = false
+155/shape_one_way_margin = 1.0
+155/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 63 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+155/z_index = 0
+156/name = "Serene_Village_32x32.png 156"
+156/texture = ExtResource( 1 )
+156/tex_offset = Vector2( 0, 0 )
+156/modulate = Color( 1, 1, 1, 1 )
+156/region = Rect2( 384, 32, 32, 32 )
+156/tile_mode = 0
+156/occluder_offset = Vector2( 0, 0 )
+156/navigation_offset = Vector2( 0, 0 )
+156/shape_offset = Vector2( 0, 0 )
+156/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+156/shape = SubResource( 64 )
+156/shape_one_way = false
+156/shape_one_way_margin = 1.0
+156/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 64 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+156/z_index = 0
+157/name = "Serene_Village_32x32.png 157"
+157/texture = ExtResource( 1 )
+157/tex_offset = Vector2( 0, 0 )
+157/modulate = Color( 1, 1, 1, 1 )
+157/region = Rect2( 0, 416, 64, 64 )
+157/tile_mode = 0
+157/occluder_offset = Vector2( 0, 0 )
+157/navigation_offset = Vector2( 0, 0 )
+157/shape_offset = Vector2( 0, 0 )
+157/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+157/shape = SubResource( 65 )
+157/shape_one_way = false
+157/shape_one_way_margin = 1.0
+157/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 65 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+157/z_index = 0

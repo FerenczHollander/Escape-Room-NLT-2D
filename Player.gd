@@ -1,19 +1,20 @@
 extends KinematicBody2D
-var velocity = 150
+var velocity = 75
 var direction = Vector2(0,0)
 var animationAngle = 0
 var animationDirection = 0
 var canMove = true
-var currentInteractibleArea = null
+var mustComplete = false
 signal changeScene
 var nextScene = null
 var dialogueStep = 0
-var sceneOrder = ["res://Overworld.tscn","res://Vragen Scenes/Vraag 1.tscn","res://Vragen Scenes/Vraag 2.tscn","res://Vragen Scenes/Vraag 3.tscn"]
+var sceneOrder = ["res://Overworld.tscn","res://Vragen Scenes/Dier spoor.tscn","res://Vragen Scenes/Dageraad grootte.tscn",
+"res://Vragen Scenes/3 fases silica.tscn","res://Vragen Scenes/Plas tegen muur.tscn","res://Vragen Scenes/3 vaste vormen silica.tscn"]
 var dialogueStart
 var maxDialogue
-var currentObjective = 0
-onready var objectives = ["Node2D/First House/Objective"]
+onready var objectives = ["Node2D/First House/Objective","Node2D/Pinkeln Gebied","Node2D/Na Pinkeln Gebied"]
 onready var objectivePosition
+onready var root = get_tree().get_root()
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -24,20 +25,27 @@ onready var objectivePosition
 func _ready():
 	Globals.questionStep += 1
 	if get_tree().current_scene.filename == "res://Beginning World.tscn":
-		currentInteractibleArea = "First_Spawn"
+		Globals.currentInteractibleArea = "First_Spawn"
 		dialogueStart = 0
 		maxDialogue = 5
 		$UI/Dialogue.visible = true
 	if get_tree().current_scene.filename == "res://Overworld.tscn":
+		mustComplete = false
 		Globals.questionStep = 0
-		currentObjective += 1
+		Globals.currentObjective += 1
+		if Globals.currentObjective < len(objectives):
+			root.get_node(objectives[Globals.currentObjective]).monitorable = true
+			root.get_node(objectives[Globals.currentObjective]).monitoring = true
 		global_position = Globals.lastPosition
 		if Globals.firstSpawn == false:
 			Globals.firstSpawn = true
-			currentInteractibleArea = "First_Spawn"
+			Globals.currentInteractibleArea = "First_Spawn"
 			dialogueStart = 11
 			maxDialogue = 4
 			$UI/Dialogue.visible = true
+		else:
+			root.get_node(Globals.currentInteractibleArea).queue_free()
+			Globals.currentInteractibleArea = null
 	pass # Replace with function body.
 
 
@@ -50,8 +58,10 @@ func _process(delta):
 	else:
 		$Camera2D.current = true
 		canMove = true
-	if currentInteractibleArea != null:
+	if Globals.currentInteractibleArea != null and visible == true:
 		if dialogueStep < maxDialogue-1:
+			canMove = false
+		elif mustComplete == true:
 			canMove = false
 		else:
 			canMove = true
@@ -82,7 +92,7 @@ func _process(delta):
 	
 #INTERACTIONS
 	#Text animation
-	if currentInteractibleArea == null:
+	if Globals.currentInteractibleArea == null:
 		$"UI/Arrow Objective".visible = true
 		if $UI/Interact.visible_characters > 0:
 			$UI/Interact.visible_characters -= 1
@@ -90,7 +100,7 @@ func _process(delta):
 			$UI/Interact.visible_characters = 0
 		$UI/Dialogue.visible = false
 		$UI/Dialogue.visible_characters = 0
-	else:
+	elif visible == true:
 		$"UI/Arrow Objective".visible = false 
 		$UI/Dialogue.visible = true
 		$UI/Dialogue.text = dialogue[(dialogueStart+dialogueStep)]
@@ -103,17 +113,18 @@ func _process(delta):
 				dialogueStep += 1
 				$UI/Dialogue.visible_characters = 0
 	#Different interactions
-	if Input.is_action_just_pressed("ui_interact") and dialogueStep == maxDialogue-1:
+	if visible == true and Input.is_action_just_pressed("ui_interact") and dialogueStep == maxDialogue-1:
 		nextScene()
 #Interactible objects
 	#Leaving spawn
-	if direction != Vector2.ZERO and currentInteractibleArea == "First_Spawn":
-		currentInteractibleArea = null
-		dialogueStep = 0
+	if direction != Vector2.ZERO:
+		if Globals.currentInteractibleArea == "First_Spawn":
+			Globals.currentInteractibleArea = null
+			dialogueStep = 0
 	#Objective
 	if get_tree().current_scene.filename == "res://Overworld.tscn" or get_tree().current_scene.filename == "res://Beginning World.tscn":
-		if currentObjective < len(objectives):
-			objectivePosition = get_tree().get_root().get_node(objectives[currentObjective]).global_position
+		if Globals.currentObjective < len(objectives):
+			objectivePosition = root.get_node(objectives[Globals.currentObjective]).global_position
 			$"UI/Arrow Objective".rotation_degrees = rad2deg((objectivePosition-global_position).angle())+90
 
 #Dialogue
@@ -121,7 +132,9 @@ var dialogue = ["Eindelijk ben ik bij opa's huis","Hij heeft mij verteld dat zij
 "Maar hij heeft een terminale epilepsie,","Dus hij heeft hem per ongeluk in de haard gegooid","Kijken of ik wat kan terugvinden","Godverdedriedubbeltjes, de deur zit op slot",
  "Ik zie wel dat als ik deze vragen beantwoord de deur opengaat","De graslanden en grazers schreeuwen nog om jouw hulp!","HELP ZE!","Gefeliciteerd! Je kan eindelijk weg!",
 "Het hele eiland is je dankbaar!", "Na het zoeken ben ik in de haard gevallen!","En ik ben nu ineens hier beland!",
-"Ik krijg een gevoel dat ik de natuur moet helpen","Aber jetzt muss ich pinkeln!"]
+"Ik krijg een gevoel dat ik de natuur moet helpen","Aber jetzt muss ich pinkeln!","Dit lijkt mij een goede plek um zu pinkeln","Hier gaan we!","OH NEE!","Mijn hele broek zit onder de plas!",
+"Hoe kan dit? Er staat hier wat uitleg!","Poehoe, mijn hele broek zit onder de plas","Ik weet gelukkig wel nu hoe -","-het komt dat de muur mijn plas niet wou nemen","Ik moet hem wel even schoonwassen"
+,"Waar kan ik dat doen?","Oh ja! Bij de zee!","Let's go!"]
 #Change scenes
 func nextScene():
 	if get_tree().current_scene.filename == "res://Overworld.tscn":
@@ -133,18 +146,18 @@ func nextScene():
 
 #Areas
 func _on_FirstHouse_Door_body_entered(body):
-	currentInteractibleArea = "First House"
+	Globals.currentInteractibleArea = "First House"
 	dialogueStart = 5
 	maxDialogue = 2
 	Globals.questionStart = 1
 	Globals.maxQuestions = 3
 	$UI/Dialogue.visible = true
 func _on_FirstHouse_Door_body_exited(body):
-	currentInteractibleArea = null
+	Globals.currentInteractibleArea = null
 	dialogueStep = 0
 
 func _on_Final_Border_body_entered(body):
-	currentInteractibleArea = "Final Border"
+	Globals.currentInteractibleArea = "Final Border"
 	if Globals.maxQuestionsAnswered > Globals.questionsAnswered:
 		dialogueStart = 7
 		maxDialogue = 2
@@ -152,10 +165,37 @@ func _on_Final_Border_body_entered(body):
 	if Globals.maxQuestionsAnswered == Globals.questionsAnswered:
 		dialogueStart = 9
 		maxDialogue = 2
-	pass # Replace with function body.
+
 
 
 func _on_Final_Border_body_exited(body):
-	currentInteractibleArea = null
+	Globals.currentInteractibleArea = null
 	dialogueStep = 0
+
+
+func _on_Pinkeln_Gebied_body_entered(body):
+	Globals.currentInteractibleArea = "Node2D/Pinkeln Gebied"
+	dialogueStart = 15
+	maxDialogue = 5
+	mustComplete = true
+	Globals.questionStart = 4
+	Globals.maxQuestions = 2
+	$UI/Dialogue.visible = true
+
+
+
+func _on_Na_Pinkeln_Gebied_body_entered(body):
+	Globals.currentInteractibleArea = "Node2D/Na Pinkeln Gebied"
+	dialogueStart = 20
+	maxDialogue = 7
+
+
+func _on_Na_Pinkeln_Gebied_body_exited(body):
+	dialogueStep = 0
+	root.get_node(Globals.currentInteractibleArea).queue_free()
+	Globals.currentObjective += 1
+	Globals.currentInteractibleArea = null
+	if Globals.currentObjective < len(objectives):
+		root.get_node(objectives[Globals.currentObjective]).monitorable = true
+		root.get_node(objectives[Globals.currentObjective]).monitoring = true
 	pass # Replace with function body.

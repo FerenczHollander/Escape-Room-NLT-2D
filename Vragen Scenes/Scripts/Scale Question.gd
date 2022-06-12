@@ -35,6 +35,7 @@ func _on_Confirm_pressed():
 	else:
 		$Result/AnimationPlayer.play("Incorrect")
 		onCooldown = true
+		$"CanvasLayer/Time Left/Timer".start($"CanvasLayer/Time Left/Timer".time_left-Globals.timeOffWrongAnswer)
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):

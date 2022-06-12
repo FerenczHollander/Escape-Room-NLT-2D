@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/Vragen/Background.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Answer_Button_Unpressed.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://GlobalTimeLeft.gd" type="Script" id=11]
 [ext_resource path="res://Timer.gd" type="Script" id=12]
 [ext_resource path="res://Assets/Vragen/Horse Footprint.jpeg" type="Texture" id=13]
+[ext_resource path="res://Assets/Pixelated Font Small.tres" type="DynamicFont" id=14]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Correct"
@@ -137,14 +138,23 @@ margin_top = -140.0
 margin_right = 1006.0
 margin_bottom = -10.0
 custom_fonts/font = ExtResource( 5 )
-text = "Zo te zien heb je een diertje laten schrikken, gelukkig heeft het sporen achter. Welk dier is het?"
+text = "Zo te zien heb je een diertje laten schrikken, gelukkig heeft het sporen achtergelaten. Welk dier is het?"
 align = 1
 valign = 1
 autowrap = true
 uppercase = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="Walvis" type="Label" parent="Control"]
+margin_left = 406.0
+margin_top = 375.0
+margin_right = 1406.0
+margin_bottom = 505.0
+custom_fonts/font = ExtResource( 14 )
+text = "Dat moet een walvis zijn"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
 
 [node name="Button 1" type="TextureButton" parent="Control"]
 margin_left = 6.0
@@ -159,7 +169,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Antwoord 1" type="Label" parent="Control/Button 1"]
+[node name="Antwoord" type="Label" parent="Control/Button 1"]
 margin_right = 500.0
 margin_bottom = 140.0
 rect_scale = Vector2( 2, 1 )
@@ -168,7 +178,6 @@ text = "Paard"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
@@ -185,7 +194,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Antwoord 2" type="Label" parent="Control/Button 2"]
+[node name="Antwoord" type="Label" parent="Control/Button 2"]
 margin_right = 500.0
 margin_bottom = 140.0
 rect_scale = Vector2( 2, 1 )
@@ -211,7 +220,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Antwoord 3" type="Label" parent="Control/Button 3"]
+[node name="Antwoord" type="Label" parent="Control/Button 3"]
 margin_right = 500.0
 margin_bottom = 140.0
 rect_scale = Vector2( 2, 1 )
