@@ -12,7 +12,7 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=10]
 [ext_resource path="res://GlobalTimeLeft.gd" type="Script" id=11]
 [ext_resource path="res://Timer.gd" type="Script" id=12]
-[ext_resource path="res://Assets/Vragen/Horse Footprint.jpeg" type="Texture" id=13]
+[ext_resource path="res://Assets/Vragen/stromatoliet.png" type="Texture" id=13]
 [ext_resource path="res://Assets/Pixelated Font Small.tres" type="DynamicFont" id=14]
 [ext_resource path="res://Assets/Book Spritesheet.png" type="Texture" id=15]
 [ext_resource path="res://Questions Answered.gd" type="Script" id=16]
@@ -179,7 +179,6 @@ __meta__ = {
 [node name="Animated Sprite" type="AnimatedSprite" parent="CanvasLayer/Questions Answered"]
 position = Vector2( 75, -3 )
 frames = SubResource( 14 )
-frame = 8
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 10 )]
@@ -197,7 +196,6 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="Control"]
 position = Vector2( 764, 211 )
-scale = Vector2( 0.61985, 0.61985 )
 texture = ExtResource( 13 )
 
 [node name="Vraag" type="Label" parent="Control"]
@@ -206,23 +204,14 @@ margin_top = -140.0
 margin_right = 1006.0
 margin_bottom = -10.0
 custom_fonts/font = ExtResource( 5 )
-text = "Zo te zien heb je een diertje laten schrikken, gelukkig heeft het sporen achtergelaten. Welk dier is het?"
+text = "In het water zie je ook allemaal ander soort bijzonder stenen hoe heette deze ook alweer?"
 align = 1
 valign = 1
 autowrap = true
 uppercase = true
-
-[node name="Walvis" type="Label" parent="Control"]
-margin_left = 406.0
-margin_top = 375.0
-margin_right = 1406.0
-margin_bottom = 505.0
-custom_fonts/font = ExtResource( 14 )
-text = "Dat moet een walvis zijn"
-align = 1
-valign = 1
-autowrap = true
-uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button 1" type="TextureButton" parent="Control"]
 margin_left = 6.0
@@ -242,10 +231,11 @@ margin_right = 500.0
 margin_bottom = 140.0
 rect_scale = Vector2( 2, 1 )
 custom_fonts/font = ExtResource( 6 )
-text = "Paard"
+text = "Stromatoliet"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
@@ -267,7 +257,7 @@ margin_right = 500.0
 margin_bottom = 140.0
 rect_scale = Vector2( 2, 1 )
 custom_fonts/font = ExtResource( 6 )
-text = "Koe"
+text = "Koraal"
 align = 1
 valign = 1
 __meta__ = {
@@ -293,7 +283,7 @@ margin_right = 500.0
 margin_bottom = 140.0
 rect_scale = Vector2( 2, 1 )
 custom_fonts/font = ExtResource( 6 )
-text = "Hert"
+text = "Basalt"
 align = 1
 valign = 1
 __meta__ = {

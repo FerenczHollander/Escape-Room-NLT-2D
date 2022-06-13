@@ -1,6 +1,6 @@
 extends Node
 var time_left = 2700
-var questionsAnswered = 3
+var questionsAnswered = 0
 var maxQuestionsAnswered = 40
 var lastPosition = Vector2(160,216)
 var questionStart

@@ -112,7 +112,7 @@ shape = SubResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Walk_4"
-frame = 1
+frame = 3
 playing = true
 
 [node name="UI" type="Node2D" parent="."]
@@ -146,6 +146,7 @@ texture = ExtResource( 4 )
 position = Vector2( 136.538, 6.42857 )
 scale = Vector2( 0.961538, 0.714286 )
 frames = SubResource( 17 )
+frame = 1
 playing = true
 
 [node name="Interact" type="Label" parent="UI"]
