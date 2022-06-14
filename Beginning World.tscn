@@ -98,7 +98,7 @@ __meta__ = {
 [node name="Animated Sprite" type="AnimatedSprite" parent="CanvasLayer/Questions Answered"]
 position = Vector2( 75, -3 )
 frames = SubResource( 14 )
-frame = 7
+frame = 1
 playing = true
 
 [node name="First House" type="StaticBody2D" parent="."]

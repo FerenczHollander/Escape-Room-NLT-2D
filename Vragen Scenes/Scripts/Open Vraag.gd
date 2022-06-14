@@ -19,6 +19,7 @@ func _process(delta):
 
 func _on_Confirm_pressed():
 	if onCooldown == false:
+		$"Control/Gebruiker Antwoord".readonly = true
 		$"Control/Gebruiker Antwoord".rect_size.y = $"Control/Gebruiker Antwoord".rect_size.y * 0.5
 		$"Control/Confirm".visible = false
 		$"Control/Juist".visible = true
@@ -27,7 +28,17 @@ func _on_Confirm_pressed():
 
 func _on_Juist_pressed():
 	if onCooldown == false:
-		$Result/AnimationPlayer.play("Correct")
+		if beginningText == $"Control/Gebruiker Antwoord".text:
+			if $"CanvasLayer/Time Left/Timer".time_left > Globals.timeLeftOpenVraag:
+				$"CanvasLayer/Time Left/Timer".start(Globals.timeLeftOpenVraag)
+			$Result/AnimationPlayer.play("Incorrect")
+			$AudioPlayer.stream = load(Globals.incorrectSound)
+			$AudioPlayer.play()
+			onCooldown = true
+		else:	
+			$Result/AnimationPlayer.play("Correct")
+			$AudioPlayer.stream = load(Globals.correctSound)
+			$AudioPlayer.play()
 
 
 
@@ -37,6 +48,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		$Player.nextScene()
 	if anim_name == "Incorrect":
 		onCooldown = false
+		$"Control/Gebruiker Antwoord".readonly = false
 		$"Control/Gebruiker Antwoord".rect_size.y = $"Control/Gebruiker Antwoord".rect_size.y * 2
 		$"Control/Confirm".visible = true
 		$"Control/Juist".visible = false
@@ -47,7 +59,13 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 func _on_Onjuist_pressed():
 	if onCooldown == false:
-		$"CanvasLayer/Time Left/Timer".start($"CanvasLayer/Time Left/Timer".time_left-Globals.timeOffWrongAnswer)
+		Globals.wrongAnswers += 1
+		if $"CanvasLayer/Time Left/Timer".time_left-(Globals.timeOffWrongAnswer*Globals.wrongAnswers) <= 0:
+			$"CanvasLayer/Time Left/Timer".start(0.1)
+		else:
+			$"CanvasLayer/Time Left/Timer".start($"CanvasLayer/Time Left/Timer".time_left-(Globals.timeOffWrongAnswer*Globals.wrongAnswers))
 		$Result/AnimationPlayer.play("Incorrect")
+		$AudioPlayer.stream = load(Globals.incorrectSound)
+		$AudioPlayer.play()
 		onCooldown = true
 	pass # Replace with function body.

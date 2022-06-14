@@ -177,7 +177,7 @@ __meta__ = {
 [node name="Animated Sprite" type="AnimatedSprite" parent="CanvasLayer/Questions Answered"]
 position = Vector2( 75, -3 )
 frames = SubResource( 14 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 10 )]
@@ -210,10 +210,7 @@ margin_right = 968.0
 margin_bottom = 360.0
 custom_fonts/font = ExtResource( 9 )
 text = "Juiste antwoord:
-Ontbossing in het amazonegebied gebeurt vooral om ruimte te maken voor weilanden en landbouwgrond dit heeft twee consequenties:
-1. Grassen en gewassen zorgen voor meer verwering dan bomen waardoor silica makkelijker vrijkomt dus het silica gehalte in de grond zal stijgen.
-2. Fytolieten in grassen spoelen minder makkelijk weg dan fytolieten in bomen dus zal de silica langer in de bodem blijven en zal het silica gehalte stijgen.
-"
+Door de polaire structuur van de klei en het water worden bindingen gevormd waarin water beter vastgehouden word. Ook is klei veel fijner waardoor er meer ruimte is tussen de moleculen om water op te slaan."
 readonly = true
 wrap_enabled = true
 __meta__ = {
@@ -226,7 +223,7 @@ margin_top = -140.0
 margin_right = 1006.0
 margin_bottom = -28.0
 custom_fonts/font = ExtResource( 9 )
-text = "De laatste jaren is er veel sprake van ontbossing in het amazonegebied, welk effect heeft dit op het silica gehalte in de grond?"
+text = " Waarom kan kleigrond meer water opnemen dan zandgrond?"
 align = 1
 valign = 1
 autowrap = true

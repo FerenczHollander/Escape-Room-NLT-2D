@@ -20,12 +20,20 @@ func _ready():
 
 func correct():
 	get_node("Result/AnimationPlayer").play("Correct")
+	$AudioPlayer.stream = load(Globals.correctSound)
+	$AudioPlayer.play()
 
 func incorrect():
 	get_node("Result/AnimationPlayer").play("Incorrect")
-	$"CanvasLayer/Time Left/Timer".start($"CanvasLayer/Time Left/Timer".time_left-Globals.timeOffWrongAnswer)
+	$AudioPlayer.stream = load(Globals.incorrectSound)
+	$AudioPlayer.play()
+	Globals.wrongAnswers += 1
+	if $"CanvasLayer/Time Left/Timer".time_left-(Globals.timeOffWrongAnswer*Globals.wrongAnswers) <= 0:
+		$"CanvasLayer/Time Left/Timer".start(0.1)
+	else:
+		$"CanvasLayer/Time Left/Timer".start($"CanvasLayer/Time Left/Timer".time_left-(Globals.timeOffWrongAnswer*Globals.wrongAnswers))
 	onCooldown = true
-
+	
 func _on_Button_1_pressed():
 	if onCooldown == false:
 		if correctButton == 1:

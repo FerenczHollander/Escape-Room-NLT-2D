@@ -32,10 +32,18 @@ func _process(delta):
 func _on_Confirm_pressed():
 	if $Foto.scale.x > (correctAnswer-offset) and $Foto.scale.x < (correctAnswer+offset):
 		$Result/AnimationPlayer.play("Correct")
+		$AudioPlayer.stream = load(Globals.correctSound)
+		$AudioPlayer.play()
 	else:
+		$AudioPlayer.stream = load(Globals.incorrectSound)
+		$AudioPlayer.play()
 		$Result/AnimationPlayer.play("Incorrect")
 		onCooldown = true
-		$"CanvasLayer/Time Left/Timer".start($"CanvasLayer/Time Left/Timer".time_left-Globals.timeOffWrongAnswer)
+		Globals.wrongAnswers += 1
+		if $"CanvasLayer/Time Left/Timer".time_left-(Globals.timeOffWrongAnswer*Globals.wrongAnswers) <= 0:
+			$"CanvasLayer/Time Left/Timer".start(0.1)
+		else:
+			$"CanvasLayer/Time Left/Timer".start($"CanvasLayer/Time Left/Timer".time_left-(Globals.timeOffWrongAnswer*Globals.wrongAnswers))
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
