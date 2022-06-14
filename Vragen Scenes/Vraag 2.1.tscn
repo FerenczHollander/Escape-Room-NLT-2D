@@ -178,7 +178,7 @@ __meta__ = {
 [node name="Animated Sprite" type="AnimatedSprite" parent="CanvasLayer/Questions Answered"]
 position = Vector2( 75, -3 )
 frames = SubResource( 14 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 10 )]
@@ -199,7 +199,7 @@ margin_top = -140.0
 margin_right = 1006.0
 margin_bottom = -10.0
 custom_fonts/font = ExtResource( 5 )
-text = "Oh nee een man plast tegen een nationaal monument / huis, hoe zorg je er het best voor dat dit niet meer gebeurt?"
+text = "Oh nee, je plas kaatst terug op je broek! Hoe kan dit?"
 align = 1
 valign = 1
 autowrap = true
@@ -212,15 +212,12 @@ margin_bottom = 40.0
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Antwoord" type="Label" parent="Control/Button 1"]
 margin_right = 1000.0
 margin_bottom = 140.0
 custom_fonts/font = ExtResource( 6 )
-text = "Breng een laag silica verf aan op de muur, dat zal em leren."
+text = "Er zit een laagje silica verf op de muur"
 align = 1
 valign = 1
 autowrap = true
@@ -244,7 +241,7 @@ __meta__ = {
 margin_right = 1000.0
 margin_bottom = 140.0
 custom_fonts/font = ExtResource( 6 )
-text = "Plaats een laag sponsen voor de muur zodat je plas van de man wordt geabsorbeerd."
+text = "De muur is van kwarts"
 align = 1
 valign = 1
 autowrap = true
@@ -265,7 +262,8 @@ texture_hover = ExtResource( 4 )
 margin_right = 1000.0
 margin_bottom = 140.0
 custom_fonts/font = ExtResource( 6 )
-text = "Vraag vriendelijk aan de man of hij wil stoppen"
+text = "Wanneer de plas reageert met sulfietdioxide zal het neerslaan op je broek in de vorm van kleine 
+druppels op mesoniveau"
 align = 1
 valign = 1
 autowrap = true
